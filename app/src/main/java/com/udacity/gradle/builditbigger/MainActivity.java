@@ -14,9 +14,7 @@ import com.example.joketellerandroid.JokesActivity;
 
 public class MainActivity extends AppCompatActivity{
 
-    Context ctx;
-
-    EndpointsAsyncTask asyncTask = new EndpointsAsyncTask();
+    private Context ctx;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
