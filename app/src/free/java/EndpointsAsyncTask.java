@@ -1,5 +1,3 @@
-package com.udacity.gradle.builditbigger;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -22,7 +20,7 @@ class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
 
     @Override
     protected String doInBackground(Context... contexts) {
-        if(myApiService == null) {  // Only do this once
+        if (myApiService == null) {  // Only do this once
             MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(),
                     new AndroidJsonFactory(), null)
                     .setRootUrl("http://10.0.2.2:8080/_ah/api/")

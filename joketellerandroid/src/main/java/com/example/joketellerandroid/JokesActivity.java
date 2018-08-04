@@ -1,5 +1,6 @@
 package com.example.joketellerandroid;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -14,6 +15,11 @@ public class JokesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_jokes);
 
         TextView tv_jokes = findViewById(R.id.tv_jokes);
-        tv_jokes.setText(getIntent().getStringExtra("jokes"));
+
+        final String mJokesIntent = "jokes";
+        final Intent intent = getIntent();
+
+        if (intent.hasExtra(mJokesIntent))
+            tv_jokes.setText(intent.getStringExtra(mJokesIntent));
     }
 }
